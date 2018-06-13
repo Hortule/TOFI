@@ -1,8 +1,10 @@
 #include "MyForm.h"
 
+
+
 using namespace TOFI; //name of your project
 
-[STAThread]//не знаю зачем в данном случае но без этого браузер файлов не работает
+[STAThread]//don't know for what this in this situation, but change of file don't work without it
 
 int main(array<System::String ^> ^args)
 {

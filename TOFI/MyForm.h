@@ -1,5 +1,4 @@
 #pragma once
-
 namespace TOFI {
 
 	using namespace System;
@@ -41,6 +40,7 @@ namespace TOFI {
 	private: System::Windows::Forms::TextBox^  textBox1;
 	private: System::Windows::Forms::OpenFileDialog^  openFileDialog1;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::RichTextBox^  richTextBox1;
 	protected:
 
 	private:
@@ -60,6 +60,7 @@ namespace TOFI {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->SuspendLayout();
 			// 
 			// Fselect
@@ -94,11 +95,20 @@ namespace TOFI {
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Path to file:";
 			// 
+			// richTextBox1
+			// 
+			this->richTextBox1->Location = System::Drawing::Point(243, 182);
+			this->richTextBox1->Name = L"richTextBox1";
+			this->richTextBox1->Size = System::Drawing::Size(388, 183);
+			this->richTextBox1->TabIndex = 3;
+			this->richTextBox1->Text = L"";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(837, 409);
+			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->Fselect);
@@ -116,10 +126,16 @@ namespace TOFI {
 		
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
-		//גûבמנ פאיכא
+		//file selection
 		if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 		{	
+			//path to file put in textbox1
 			textBox1->Text = openFileDialog1->FileName;
+			System::IO::StreamReader ^ sr = gcnew
+			System::IO::StreamReader(openFileDialog1->FileName);
+			richTextBox1->Text = System::Convert::ToString(sr->Read());
+			sr->Close();
+
 		}
 
 	}
