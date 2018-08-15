@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.261,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.962,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018.08.15 16:10:35.996,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2018.08.15 16:10:36.014,=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018.08.15 16:10:49.393,C:\RAD studio\C\TOFI\Unit1.cpp=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2018.08.15 16:10:49.393,C:\RAD studio\C\TOFI\Unit1.dfm=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018.08.15 16:10:49.393,C:\RAD studio\C\TOFI\Unit1.h=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2018.08.15 16:10:53.310,C:\RAD studio\C\TOFI\Project1PCH1.h=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2018.08.15 16:10:53.877,C:\RAD studio\C\TOFI\Project1.cbproj=C:\Users\admin\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
