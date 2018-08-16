@@ -17,24 +17,30 @@ __fastcall TTOFI_main::TTOFI_main(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TTOFI_main::pathfinderClick(TObject *Sender)
 {
-	String pathf;
+	String pathf;                                                  //open file
 	OpenDialog1->Execute();
 	pathf = OpenDialog1->FileName;
 	Path->Text = pathf;
- /*	ifstream st1(pathf.c_str());
-  //	for (int i = 0; i < 1000; i++) {
-	ShowMessage(IntToStr(st1.get()))   ;
-	ShowMessage(st1.get())   ;
-  //	}                                                      */
   std::fstream fs(pathf.c_str(), std::ios::in | std::ios::binary);
-	if (fs.is_open())
-    {
-		char rer;
-		fs.read(&rer, sizeof(char));
+  char rer[100];
+  UnicodeString b;
+
+
+	if (fs.is_open())                                                   //taking hex of file
+	{
+		for (int i = 0; i < 100; i++)
+			{
+			fs.read(&rer[i], sizeof(char));
+			b += IntToHex((unsigned int)((unsigned char)rer[i]))[7];
+			b += IntToHex((unsigned int)((unsigned char)rer[i]))[8];
+			b += ' ';
+			}
 		fs.close();
-		ShowMessage(rer)     ;
+
 	}
 
+	 Memo1->Lines->Strings[0] = b;
 
 }
 //---------------------------------------------------------------------------
+
